@@ -103,7 +103,7 @@ Admins can:
 
 The following ER diagram represents the database design of the TripMate system.
 
-![TripMate ER Diagram](dataset/ER Diagram.png)
+![TripMate ER Diagram](database/ER_Diagram.png)
 
 
 ## Project Structure (High-Level)
