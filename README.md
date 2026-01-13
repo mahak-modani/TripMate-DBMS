@@ -99,6 +99,13 @@ Admins can:
 
 ---
 
+## Entity Relationship (ER) Diagram
+
+The following ER diagram represents the database design of the TripMate system.
+
+![TripMate ER Diagram](dataset/ER Diagram.png)
+
+
 ## Project Structure (High-Level)
 
 ```
