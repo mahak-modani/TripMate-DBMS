@@ -1,0 +1,76 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #D8C8E8; /* Soft pastel purple */
+  color: #4B3F72; /* Deep muted purple for readability */
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  max-width: 600px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #6A5B8F; /* Elegant muted purple */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #7D6EAB;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: white;
+  background-color: #7D6EAB;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #6A5B8F;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 1rem;
+}
+
+footer p {
+  color: rgba(75, 63, 114, 0.7);
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="../static/css/Profile_SettingsStyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul class="nav-menu">
+                <li><a href="#" id="dashboard">Dashboard</a></li>
+                <li><a href="#" id="trip-planner">Trip Planner</a></li>
+                <li><a href="#" id="my-trips">My Trips</a></li>
+                <!--<li><a href="#" id="budget-tracker">Budget Tracker</a></li>-->
+                <li><a href="#" id="profile-settings">Profile Settings</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="profile-header">
+                <h1>Profile Settings</h1>
+                <p>Update your personal information.</p>
+            </div>
+
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required data-user-name="{{ user.name if user else 'John Doe' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required data-user-email="{{ user.email if user else 'john.doe@example.com' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" required data-user-phone="{{ user.phone if user else '1234567890' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required value="password123">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required data-user-age="{{ user.age if user else '30' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="M" {% if user and user.gender == 'M' %}selected{% endif %}>Male</option>
+                        <option value="F" {% if user and user.gender == 'F' %}selected{% endif %}>Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" required data-user-nationality="{{ user.nationality if user else 'American' }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="interests">Interests</label>
+                    <textarea id="interests" name="interests" rows="4" required data-user-interests="{{ user.interests if user else 'Travel, Music, Hiking' }}"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Check if the site is being served by Flask (http://127.0.0.1:5000) or accessed as a file
+        const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+    
+        // Define URLs for both cases
+        const routes = {
+          "dashboard": isFlaskRunning ? "/dashboard" : "../templates/dashboard.html",
+          "trip-planner": isFlaskRunning ? "/create_trip" : "../templates/TripPlanner.html",
+          "my-trips": isFlaskRunning ? "/my_trips" : "../templates/MyTrips.html",
+          "profile-settings": isFlaskRunning ? "/profile_settings" : "../templates/Profile_Settings.html",
+          "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+        };
+    
+        // Set the href attributes dynamically
+        document.getElementById("dashboard").href = routes["dashboard"];
+        document.getElementById("trip-planner").href = routes["trip-planner"];
+        document.getElementById("my-trips").href = routes["my-trips"];
+        document.getElementById("profile-settings").href = routes["profile-settings"];
+        document.getElementById("logout").href = routes["logout"];
+      </script>
+
+    <script src="../static/js/Profile_SettingsScripts.js"></script>
+</body>
+</html>

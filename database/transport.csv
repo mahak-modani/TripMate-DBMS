@@ -1,0 +1,140 @@
+id,from_area,to_area,transport_mode,travel_time_minutes,fare
+1,Jayanagar,Lalbagh,Auto,10,80.00
+2,Cantonment area,Indiranagar,Metro,15,50.00
+3,Cantonment area,Indiranagar,Auto,20,80.00
+4,Domlur,Koramangala,Auto,15,70.00
+5,Domlur,Koramangala,Cab,10,100.00
+6,Indiranagar,MG Road,Metro,10,40.00
+7,Indiranagar,MG Road,Auto,15,80.00
+8,Rajajinagar,Malleswaram,Auto,15,70.00
+9,Rajajinagar,Malleswaram,Cab,10,90.00
+10,Malleswaram,Shivajinagar,Auto,20,80.00
+11,Malleswaram,Shivajinagar,Cab,15,100.00
+12,Pete area,Majestic,Auto,10,50.00
+13,Sadashivanagar,Hebbal,Auto,20,100.00
+14,Sadashivanagar,Hebbal,Cab,15,120.00
+15,Seshadripuram,Rajajinagar,Auto,15,80.00
+16,Seshadripuram,Rajajinagar,Cab,10,100.00
+17,Shivajinagar,Ulsoor,Metro,10,50.00
+18,Shivajinagar,Ulsoor,Auto,15,80.00
+19,Ulsoor,MG Road,Metro,10,40.00
+20,Ulsoor,MG Road,Auto,15,70.00
+21,Vasanth Nagar,RT Nagar,Auto,15,80.00
+22,Vasanth Nagar,RT Nagar,Cab,10,100.00
+23,RT Nagar,Hebbal,Auto,15,80.00
+24,RT Nagar,Hebbal,Cab,10,100.00
+25,Bellandur,Marathahalli,Auto,20,90.00
+26,Bellandur,Marathahalli,Cab,15,120.00
+27,CV Raman Nagar,Indiranagar,Auto,15,80.00
+28,CV Raman Nagar,Indiranagar,Cab,10,100.00
+29,Hoodi,Whitefield,Metro,15,60.00
+30,Hoodi,Whitefield,Auto,20,90.00
+31,Krishnarajapuram,Mahadevapura,Auto,10,70.00
+32,Krishnarajapuram,Mahadevapura,Cab,10,90.00
+33,Mahadevapura,Marathahalli,Auto,15,80.00
+34,Mahadevapura,Marathahalli,Cab,10,100.00
+35,Marathahalli,Whitefield,Auto,25,100.00
+36,Marathahalli,Whitefield,Cab,20,120.00
+37,Varthur,Whitefield,Auto,20,90.00
+38,Varthur,Whitefield,Cab,15,110.00
+39,Whitefield,Electronic City,Metro,45,150.00
+40,Whitefield,Electronic City,Cab,40,200.00
+41,Banaswadi,Kalyan Nagar,Auto,15,80.00
+42,Banaswadi,Kalyan Nagar,Cab,10,100.00
+43,HBR Layout,Kammanahalli,Auto,10,70.00
+44,Horamavu,Kalyan Nagar,Auto,10,70.00
+45,Horamavu,Kalyan Nagar,Cab,10,90.00
+46,Kammanahalli,Lingarajapuram,Auto,10,70.00
+47,Ramamurthy Nagar,KR Puram,Auto,15,80.00
+48,Ramamurthy Nagar,KR Puram,Cab,10,100.00
+49,Hebbal,Yelahanka,Auto,20,90.00
+50,Hebbal,Yelahanka,Cab,15,110.00
+51,Jalahalli,Peenya,Metro,15,80.00
+52,Jalahalli,Peenya,Auto,20,100.00
+53,Mathikere,Yeshwanthpur,Auto,10,70.00
+54,Mathikere,Yeshwanthpur,Cab,10,90.00
+55,Peenya,Vijayanagar,Metro,30,120.00
+56,Peenya,Vijayanagar,Cab,25,150.00
+57,Vidyaranyapura,Yelahanka,Auto,20,90.00
+58,Vidyaranyapura,Yelahanka,Cab,15,110.00
+59,Yelahanka,Airport,Cab,25,200.00
+60,Yeshwanthpur,Malleshwaram,Metro,15,80.00
+61,Yeshwanthpur,Malleshwaram,Auto,20,100.00
+62,Bommanahalli,Electronic City,Auto,15,80.00
+63,Bommanahalli,Electronic City,Cab,10,100.00
+64,Bommasandra,Electronic City,Auto,20,100.00
+65,Bommasandra,Electronic City,Cab,15,120.00
+66,BTM Layout,Koramangala,Auto,15,80.00
+67,BTM Layout,Koramangala,Cab,10,100.00
+68,Electronic City,Bannerghatta,Auto,30,120.00
+69,Electronic City,Bannerghatta,Cab,25,150.00
+70,HSR Layout,BTM Layout,Auto,15,80.00
+71,HSR Layout,BTM Layout,Cab,10,100.00
+72,Koramangala,MG Road,Metro,20,90.00
+73,Koramangala,MG Road,Cab,15,120.00
+74,Banashankari,Jayanagar,Metro,15,80.00
+75,Banashankari,Jayanagar,Auto,20,100.00
+76,Basavanagudi,Majestic,Metro,15,80.00
+77,Basavanagudi,Majestic,Auto,20,100.00
+78,Girinagar,Vijayanagar,Auto,20,90.00
+79,Girinagar,Vijayanagar,Cab,15,110.00
+80,JP Nagar,Banashankari,Metro,15,80.00
+81,JP Nagar,Banashankari,Auto,20,100.00
+82,Jayanagar,Lalbagh,Auto,10,80.00
+83,Uttarahalli,Kengeri,Auto,25,100.00
+84,Uttarahalli,Kengeri,Cab,20,120.00
+85,Whitefield,MG Road,Cab,45,300.00
+86,Whitefield,MG Road,Auto,54,210.00
+87,Whitefield,MG Road,Metro,36,150.00
+88,Electronic City,Koramangala,Cab,30,250.00
+89,Electronic City,Koramangala,Auto,36,175.00
+90,Electronic City,Koramangala,Metro,24,125.00
+91,Koramangala,MG Road,Cab,20,150.00
+92,Koramangala,MG Road,Auto,24,105.00
+93,Koramangala,MG Road,Metro,16,75.00
+94,Indiranagar,MG Road,Cab,15,100.00
+95,Indiranagar,MG Road,Auto,18,70.00
+96,Indiranagar,MG Road,Metro,12,50.00
+97,Jayanagar,Banashankari,Cab,15,80.00
+98,Jayanagar,Banashankari,Auto,18,56.00
+99,Jayanagar,Banashankari,Metro,12,40.00
+100,Rajajinagar,Malleswaram,Cab,10,70.00
+101,Rajajinagar,Malleswaram,Auto,12,49.00
+102,Rajajinagar,Malleswaram,Metro,8,35.00
+103,Hebbal,Yelahanka,Cab,20,120.00
+104,Hebbal,Yelahanka,Auto,24,84.00
+105,Hebbal,Yelahanka,Metro,16,60.00
+106,Marathahalli,Whitefield,Cab,20,100.00
+107,Marathahalli,Whitefield,Auto,24,70.00
+108,Marathahalli,Whitefield,Metro,16,50.00
+109,HSR Layout,BTM Layout,Cab,10,80.00
+110,HSR Layout,BTM Layout,Auto,12,56.00
+111,HSR Layout,BTM Layout,Metro,8,40.00
+112,Cantonment area,MG Road,Cab,10,90.00
+113,Cantonment area,MG Road,Auto,12,62.00
+114,Cantonment area,MG Road,Metro,8,45.00
+115,Mysore Road,Vasanth Nagar,Auto,30,100.00
+116,Rajajinagar,MG Road,Auto,20,80.00
+117,Vasanth Nagar,Mavalli,Auto,15,60.00
+118,MG Road,Shivaji Nagar,Auto,20,80.00
+119,Mavalli,K.R. Market,Auto,25,90.00
+120,Shivaji Nagar,Rajajinagar,Auto,15,60.00
+121,K.R. Market,Vasanth Nagar,Auto,20,70.00
+122,Rajajinagar,Bannerghatta,Auto,30,100.00
+123,Bannerghatta,Kumaraswamy Layout,Auto,25,90.00
+124,Vasanth Nagar,Ulsoor,Auto,20,70.00
+125,Kumaraswamy Layout,Rajajinagar,Auto,25,90.00
+126,Ulsoor,Mysore Road,Auto,25,90.00
+127,Kumaraswamy Layout,Shivaji Nagar,Auto,20,70.00
+128,Badi Choupad,Amer,Auto,15,50.00
+129,Gangori Bazaar,Amer,Auto,10,40.00
+130,Amer,Amer Fort,Auto,5,20.00
+131,Amer,Amer Fort,Metro,7,30.00
+132,Ashok Nagar,Near City Palace,Auto,20,60.00
+133,Near City Palace,Man Sagar Lake,Cab,15,120.00
+134,Man Sagar Lake,Amer Fort,Cab,10,80.00
+135,Amer Fort,Moti Doongri Road,Auto,12,50.00
+136,Moti Doongri Road,Near Moti Doongri,Auto,10,30.00
+137,Near Moti Doongri,Amer Fort,Auto,15,40.00
+138,Amer Fort,Near Galtaji Temple,Cab,25,100.00
+139,Near Galtaji Temple,Near Amber Fort,Auto,18,70.00

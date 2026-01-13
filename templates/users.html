@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Users</title>
+    <link rel="stylesheet" href="../static/css/AdminUsersStyles.css">
+  </head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>TripMate Admin</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" id="users">Users</a></li>
+        <li><a href="#" id="destinations">Destinations</a></li>
+        <li><a href="#" id="attractions">Attractions</a></li>
+        <!--<li><a href="#" id="user-trips">User Trips</a></li>-->
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+
+  <div class="main-content">
+    <div class="dashboard-header">
+      <h1>Users Management</h1>
+    </div>
+
+    <div class="filter-container">
+      <input type="text" id="filter-name" placeholder="Search by Name">
+      <select id="filter-nationality">
+        <option value="">Select Nationality</option>
+        <option value="American">American</option>
+        <option value="Chinese">Chinese</option>
+        <option value="British">British</option>
+        <option value="South Korean">South Korean</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Australian">Australian</option>
+        <option value="Indian">Indian</option>
+        <option value="South Korea">South Korea</option>
+        <option value="Vietnamese">Vietnamese</option>
+        <option value="Canadian">Canadian</option>
+        <option value="Japanese">Japanese</option>
+        <option value="French">French</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Canada">Canada</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <option value="Taiwan">Taiwan</option>
+        <option value="Korean">Korean</option>
+        <option value="Indonesian">Indonesian</option>
+        <option value="UK">UK</option>
+        <option value="Italian">Italian</option>
+        <option value="Moroccan">Moroccan</option>
+        <option value="United Arab Emirates">United Arab Emirates</option>
+        <option value="Brazilian">Brazilian</option>
+        <option value="Dutch">Dutch</option>
+        <option value="USA">USA</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>
+        <option value="South African">South African</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Italy">Italy</option>
+        <option value="Scottish">Scottish</option>
+        <option value="Germany">Germany</option>
+        <option value="Greece">Greece</option>
+        <option value="German">German</option>
+        <option value="Spain">Spain</option>
+        <option value="Taiwanese">Taiwanese</option>
+        <option value="Emirati">Emirati</option>
+        <option value="New Zealander">New Zealander</option>
+      </select>
+      <input type="number" id="filter-age" placeholder="Age">
+      <select id="filter-gender">
+        <option value="">Gender</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+      <select id="filter-interests">
+        <option value="">Select Interests</option>
+        <option value="architecture, culture">Architecture, Culture</option>
+        <option value="history, museums">History, Museums</option>
+        <option value="hiking, exploration">Hiking, Exploration</option>
+        <option value="adventure, beaches">Adventure, Beaches</option>
+        <option value="nature, wildlife">Nature, Wildlife</option>
+        <option value="food, nightlife">Food, Nightlife</option>
+        <option value="art, history">Art, History</option>
+      </select>
+      <input type="date" id="filter-join-date">
+      <button class="btn-filter" onclick="applyFilters()">Apply Filters</button>
+    </div>
+
+    <table id="users-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Nationality</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Interests</th>
+          <th>Join Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="add-user-container">
+      <h3>Add New User</h3>
+      <form id="add-user-form">
+        <input type="text" id="new-name" placeholder="Name" required>
+        <input type="text" id="new-nationality" placeholder="Nationality" required>
+        <input type="email" id="new-email" placeholder="Email" required>
+        <input type="password" id="new-password" placeholder="Password" required>
+        <input type="text" id="new-phone" placeholder="Phone Number">
+        <input type="number" id="new-age" placeholder="Age" required>
+        <select id="new-gender">
+          <option value="">Select Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+        <input type="text" id="new-interests" placeholder="Interests">
+        <button class="btn-add" type="submit">Add User</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      fetch('/api/admin/logout', {
+        method: 'GET'
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.redirect) {
+          window.location.href = data.redirect;
+        }
+      })
+      .catch(error => console.error('Error during logout:', error));
+    }
+  
+    const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+  
+    const routes = {
+      "users": isFlaskRunning ? "/users" : "../templates/users.html",
+      "destinations": isFlaskRunning ? "/destinations" : "../templates/Destinations.html",
+      "attractions": isFlaskRunning ? "/attractions" : "../templates/Attractions.html",
+      "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+    };
+  
+    document.getElementById("users").href = routes["users"];
+    document.getElementById("destinations").href = routes["destinations"];
+    document.getElementById("attractions").href = routes["attractions"];
+    document.getElementById("logout").href = routes["logout"];
+  </script>
+  
+
+
+  <script src="../static/js/AdminUsersScripts.js"></script>
+</body>
+</html>

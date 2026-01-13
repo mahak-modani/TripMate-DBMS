@@ -1,0 +1,92 @@
+@import url('sidebar.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px 40px;
+    background-color: #ecf0f3;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.budget-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.budget-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.budget-form label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.budget-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.budget-form .submit-btn {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.budget-form .submit-btn:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+}
+
+.budget-summary {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.budget-summary h3 {
+    font-size: 1.6rem;
+    color: #34495e;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 20px;
+    }
+}

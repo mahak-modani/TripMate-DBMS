@@ -1,0 +1,202 @@
+/* Original Trip Planner Styles with new additions */
+
+@import url('sidebar.css');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keep Sidebar Styling the Same */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(145deg, #2f3c56, #4b5b73);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+    background-color: #ecf0f1;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul {
+    padding: 0;
+}
+
+.nav-menu li {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background-color: #34495e;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.trip-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.trip-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.trip-form label {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.trip-form input,
+.trip-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.trip-form input:focus,
+.trip-form select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.trip-form button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.trip-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.warning-banner {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+}
+
+/* ===================== Itinerary Styling ===================== */
+
+#generated-itinerary {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+#itinerary-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itinerary-item {
+    background-color: #f9f9f9;
+    border-left: 6px solid #3498db;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.itinerary-item p {
+    margin: 6px 0;
+    font-size: 1.05rem;
+    color: #2c3e50;
+}
+
+#generated-itinerary p strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+#save-itinerary {
+    margin-top: 25px;
+    background-color: #2ecc71;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#save-itinerary:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.day-heading {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

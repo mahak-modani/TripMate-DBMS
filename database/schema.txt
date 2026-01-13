@@ -1,0 +1,95 @@
+
+mysql> use TravelPlanner;
+Database changed
+mysql> show tables;
++-------------------------+
+| Tables_in_travelplanner |
++-------------------------+
+| attractions             |
+| destinations            |
+| itinerary               |
+| user_history            |
+| users                   |
++-------------------------+
+5 rows in set (0.01 sec)
+
+mysql> desc attractions;
++--------------+---------------------------------------------------------------------------+------+-----+---------+-------+
+| Field        | Type                                                                      | Null | Key | Default | Extra |
++--------------+---------------------------------------------------------------------------+------+-----+---------+-------+
+| id           | int                                                                       | NO   | PRI | NULL    |       |
+| zone         | enum('Northern','Southern','Eastern','Western','Central','North Eastern') | NO   |     | NULL    |       |
+| state        | varchar(100)                                                              | NO   |     | NULL    |       |
+| city         | varchar(100)                                                              | NO   |     | NULL    |       |
+| name         | varchar(255)                                                              | NO   |     | NULL    |       |
+| type         | varchar(100)                                                              | NO   |     | NULL    |       |
+| year         | int                                                                       | YES  |     | NULL    |       |
+| time_hr      | decimal(3,1)                                                              | YES  |     | NULL    |       |
+| rating       | decimal(2,1)                                                              | YES  |     | NULL    |       |
+| fee          | int                                                                       | YES  |     | NULL    |       |
+| airport_50km | tinyint(1)                                                                | YES  |     | NULL    |       |
+| weekly_off   | varchar(50)                                                               | YES  |     | NULL    |       |
+| significance | text                                                                      | YES  |     | NULL    |       |
+| best_daytime | varchar(50)                                                               | YES  |     | NULL    |       |
++--------------+---------------------------------------------------------------------------+------+-----+---------+-------+
+14 rows in set (0.01 sec)
+
+mysql> desc destinations;
++----------------+---------------+------+-----+---------+-------+
+| Field          | Type          | Null | Key | Default | Extra |
++----------------+---------------+------+-----+---------+-------+
+| destination_id | varchar(10)   | NO   | PRI | NULL    |       |
+| city           | varchar(255)  | NO   |     | NULL    |       |
+| country        | varchar(255)  | NO   |     | NULL    |       |
+| avg_cost       | decimal(10,2) | YES  |     | NULL    |       |
++----------------+---------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> desc itinerary;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| itinerary_id  | varchar(10) | NO   | PRI | NULL    |       |
+| User_ID       | varchar(10) | NO   | MUL | NULL    |       |
+| trip_id       | varchar(15) | NO   | MUL | NULL    |       |
+| attraction_id | int         | NO   | MUL | NULL    |       |
+| visit_date    | date        | NO   |     | NULL    |       |
+| visit_time    | varchar(50) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> desc users;
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| Join_Date    | date          | NO   |     | NULL    |       |
+| User_ID      | varchar(10)   | NO   | PRI | NULL    |       |
+| Name         | varchar(100)  | NO   |     | NULL    |       |
+| Nationality  | varchar(50)   | YES  |     | NULL    |       |
+| Password     | varchar(8)    | NO   |     | NULL    |       |
+| Email        | varchar(100)  | NO   | UNI | NULL    |       |
+| Phone_Number | char(10)      | NO   | UNI | NULL    |       |
+| Age          | int           | NO   |     | NULL    |       |
+| Gender       | enum('M','F') | NO   |     | NULL    |       |
+| interests    | varchar(255)  | YES  |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> desc user_history;
++---------------------+---------------+------+-----+---------+-------+
+| Field               | Type          | Null | Key | Default | Extra |
++---------------------+---------------+------+-----+---------+-------+
+| trip_id             | varchar(10)   | NO   | PRI | NULL    |       |
+| destination_id      | varchar(10)   | NO   | MUL | NULL    |       |
+| start_date          | date          | NO   |     | NULL    |       |
+| end_date            | date          | NO   |     | NULL    |       |
+| user_id             | varchar(10)   | YES  | MUL | NULL    |       |
+| accommodation_type  | varchar(255)  | YES  |     | NULL    |       |
+| accommodation_cost  | decimal(10,2) | YES  |     | NULL    |       |
+| transportation_type | varchar(255)  | YES  |     | NULL    |       |
+| transportation_cost | decimal(10,2) | YES  |     | NULL    |       |
+| budget              | decimal(10,2) | YES  |     | NULL    |       |
++---------------------+---------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql>

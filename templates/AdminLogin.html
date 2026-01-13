@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - TripMate</title>
+
+  <!-- Load CSS dynamically -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminLoginStyles.css') }}" 
+        onerror="this.onerror=null;this.href='../static/css/AdminLoginStyles.css';">
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Not an admin?  
+      <a href="#" onclick="navigateTo('user_login')">User Login</a> 
+    </p>
+  </div>
+
+  <!-- Load JS dynamically -->
+  <script src="{{ url_for('static', filename='js/AdminLoginScripts.js') }}" 
+          onerror="this.onerror=null;this.src='../static/js/AdminLoginScripts.js';">
+  </script>
+
+  <script>
+    function navigateTo(page) {
+      // Check if Flask is running (localhost or backend server)
+      const isFlask = typeof window.location.origin !== "undefined" && window.location.origin.includes("localhost");
+      
+      // If Flask is running, use Flask routes; otherwise, use .html files
+      window.location.href = isFlask ? `/${page}` : `${page}.html`;
+    }
+  </script>
+
+</body>
+</html>

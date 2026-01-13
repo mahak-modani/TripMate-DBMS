@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations - TripMate Admin</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/DestinationsStyles.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/AdminDashboardStyles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>TripMate Admin</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" id="users">Users</a></li>
+        <li><a href="#" id="destinations">Destinations</a></li>
+        <li><a href="#" id="attractions">Attractions</a></li>
+        <!--<li><a href="#" id="user-trips">User Trips</a></li>-->
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+
+  <div class="main-content">
+    <div class="dashboard-header">
+      <h1>Destinations Management</h1>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+      <input type="text" id="search-destination" placeholder="Search by destination name">
+      <select id="filter-city"></select>
+      <select id="filter-country"></select>
+      <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+
+    <!-- Destinations Table -->
+    <table id="destinations-table">
+      <thead>
+        <tr>
+          <th>Destination ID</th>
+          <th>Destination Name</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Add Destination Section -->
+    <div id="add-destination">
+      <h3>Add New Destination</h3>
+      <form id="add-destination-form">
+        <input type="text" id="new-destination-name" placeholder="Destination Name" required>
+        <input type="text" id="new-city" placeholder="City" required>
+        <input type="text" id="new-country" placeholder="Country" required>
+        <button type="submit">Add Destination</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    function logout() {
+      fetch('/api/admin/logout', {
+        method: 'GET'
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.redirect) {
+          window.location.href = data.redirect;
+        }
+      })
+      .catch(error => console.error('Error during logout:', error));
+    }
+  
+    const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+  
+    const routes = {
+      "users": isFlaskRunning ? "/users" : "../templates/users.html",
+      "destinations": isFlaskRunning ? "/destinations" : "../templates/Destinations.html",
+      "attractions": isFlaskRunning ? "/attractions" : "../templates/Attractions.html",
+      "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+    };
+  
+    document.getElementById("users").href = routes["users"];
+    document.getElementById("destinations").href = routes["destinations"];
+    document.getElementById("attractions").href = routes["attractions"];
+    document.getElementById("logout").href = routes["logout"];
+  </script>
+  
+  <script src="../static/js/DestinationsScripts.js"></script>
+
+</body>
+</html>

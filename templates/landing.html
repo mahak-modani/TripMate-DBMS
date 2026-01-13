@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripMate - Landing Page</title>
+
+  <!-- CSS Link Handling -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLocal = window.location.protocol === "file:";
+      const cssLink = document.createElement("link");
+      cssLink.rel = "stylesheet";
+
+      if (isLocal) {
+        cssLink.href = "../static/css/LandingStyles.css";  // Adjust if needed
+      } else {
+        cssLink.href = "/static/css/LandingStyles.css";
+      }
+
+      document.head.appendChild(cssLink);
+    });
+  </script>
+</head>
+<body>
+
+  <div class="landing-page">
+    <div class="hero">
+      <h1>Welcome to TripMate</h1>
+      <p>Plan your next adventure with ease!</p>
+      <div class="cta-buttons">
+        <button id="login-btn">Login</button> 
+        <button id="signup-btn">Sign Up</button> 
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 TripMate</p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLocal = window.location.protocol === "file:";
+
+      function navigateTo(page) {
+        if (isLocal) {
+          window.location.href = `../templates/${page}.html`;  // Adjust if needed
+        } else {
+          window.location.href = `/${page}`;
+        }
+      }
+
+      document.getElementById("login-btn").onclick = function () {
+        navigateTo("login");
+      };
+
+      document.getElementById("signup-btn").onclick = function () {
+        navigateTo("signup");
+      };
+    });
+  </script>
+
+</body>  
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips - TripMate</title>
+    <link rel="stylesheet" href="../static/css/MyTripsStyles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" id="dashboard">Dashboard</a></li>
+                <li><a href="#" id="trip-planner">Trip Planner</a></li>
+                <li><a href="#" id="my-trips">My Trips</a></li>
+                <!--<li><a href="#" id="budget-tracker">Budget Tracker</a></li>-->
+                <li><a href="#" id="profile-settings">Profile Settings</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>My Trips</h1>
+        </div>
+
+        <div id="trip-list">
+            <div id="trip-container"></div>
+        </div>
+    </div>
+
+    <script>
+        // Check if the site is being served by Flask (http://127.0.0.1:5000) or accessed as a file
+        const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+    
+        // Define URLs for both cases
+        const routes = {
+          "dashboard": isFlaskRunning ? "/dashboard" : "../templates/dashboard.html",
+          "trip-planner": isFlaskRunning ? "/create_trip" : "../templates/TripPlanner.html",
+          "my-trips": isFlaskRunning ? "/my_trips" : "../templates/MyTrips.html",
+          "profile-settings": isFlaskRunning ? "/profile_settings" : "../templates/Profile_Settings.html",
+          "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+        };
+    
+        // Set the href attributes dynamically
+        document.getElementById("dashboard").href = routes["dashboard"];
+        document.getElementById("trip-planner").href = routes["trip-planner"];
+        document.getElementById("my-trips").href = routes["my-trips"];
+        document.getElementById("profile-settings").href = routes["profile-settings"];
+        document.getElementById("logout").href = routes["logout"];
+      </script>
+
+    <!-- Link to External JavaScript File -->
+    <script src="../static/js/MyTripsScripts.js"></script>
+</body>
+</html>

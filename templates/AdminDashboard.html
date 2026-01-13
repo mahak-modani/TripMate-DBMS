@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - TripMate</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/AdminDashboardStyles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>TripMate Admin</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" id="users">Users</a></li>
+        <li><a href="#" id="destinations">Destinations</a></li>
+        <li><a href="#" id="attractions">Attractions</a></li>
+        <!--<li><a href="#" id="user-trips">User Trips</a></li>-->
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <div class="dashboard-header">
+      <h1>Admin Dashboard</h1>
+    </div>
+
+    <div id="content">
+      <p>Welcome to the Admin Dashboard! Use the menu on the left to manage users, destinations, attractions, and more.</p>
+    </div>
+
+    <div class="overview-cards">
+      <div class="card section-box">
+        <h3>Total Users</h3>
+        <p id="total-users"></p>
+      </div>
+      <div class="card section-box">
+        <h3>Total Destinations</h3>
+        <p id="total-destinations"></p>
+      </div>
+      <div class="card section-box">
+        <h3>Total Attractions</h3>
+        <p id="total-attractions"></p>
+      </div>
+      <div class="card section-box">
+        <h3>Total Trips</h3>
+        <p id="total-trips"></p>
+      </div>
+      <div class="card section-box">
+        <h3>Total Budgets</h3>
+        <p id="total-budgets"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to handle admin logout
+    function logout() {
+      fetch('/api/admin/logout', {
+        method: 'GET'
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.redirect) {
+          window.location.href = data.redirect; // Redirect to the login page
+        }
+      })
+      .catch(error => console.error('Error during logout:', error));
+    }
+    // Check if the site is being served by Flask (http://127.0.0.1:5000) or accessed as a file
+    const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+
+    // Define URLs for both cases
+    const routes = {
+      "users": isFlaskRunning ? "/users" : "../templates/users.html",
+      "destinations": isFlaskRunning ? "/destinations" : "../templates/Destinations.html",
+      "attractions": isFlaskRunning ? "/attractions" : "../templates/Attractions.html",
+      "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+    };
+
+    // Set the href attributes dynamically
+    document.getElementById("users").href = routes["users"];
+    document.getElementById("destinations").href = routes["destinations"];
+    document.getElementById("attractions").href = routes["attractions"];
+    document.getElementById("logout").href = routes["logout"];
+
+    // Fetch and display dashboard stats
+    window.onload = function() {
+      fetch('/api/dashboard/stats')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('total-users').textContent = data.totalUsers || 0;
+          document.getElementById('total-destinations').textContent = data.totalDestinations || 0;
+          document.getElementById('total-attractions').textContent = data.totalAttractions || 0;
+          document.getElementById('total-trips').textContent = data.totalTrips || 0;
+          document.getElementById('total-budgets').textContent = data.totalBudgets || 0;
+        })
+        .catch(error => console.error('Error fetching dashboard stats:', error));
+    }
+  </script>
+
+<script src="../static/js/AdminDashboardScripts.js"></script>
+</body>
+</html>

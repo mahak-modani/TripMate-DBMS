@@ -1,0 +1,241 @@
+destination_id,city,country,avg_cost
+D001,London,UK,120000.00
+D002,Phuket,Thailand,70000.00
+D003,Bali,Indonesia,75000.00
+D004,New York,USA,140000.00
+D005,Tokyo,Japan,130000.00
+D006,Paris,France,125000.00
+D007,Sydney,Australia,135000.00
+D008,Rio de Janeiro,Brazil,90000.00
+D009,Amsterdam,Netherlands,125000.00
+D010,Dubai,United Arab Emirates,110000.00
+D011,Cancun,Mexico,150000.00
+D012,Barcelona,Spain,140000.00
+D013,Honolulu,Hawaii,180000.00
+D014,Berlin,Germany,135000.00
+D015,Marrakech,Morocco,120000.00
+D016,Edinburgh,Scotland,140000.00
+D017,Rome,Unknown,130000.00
+D018,Bangkok,Thailand,75000.00
+D019,Hawaii,USA,180000.00
+D020,Vancouver,Canada,160000.00
+D021,Seoul,South Korea,120000.00
+D022,Los Angeles,USA,170000.00
+D023,Santorini,Greece,150000.00
+D024,Phnom Penh,Cambodia,70000.00
+D025,Athens,Greece,140000.00
+D026,Cape Town,South Africa,130000.00
+D027,Auckland,New Zealand,150000.00
+D028,Hyderabad,India,30000.00
+D029,Delhi,India,30000.00
+D030,Mumbai,India,35000.00
+D031,Lonavala,India,30000.00
+D032,Bengaluru,India,30000.00
+D033,Hyderabad,India,30000.00
+D034,Kolkata,India,30000.00
+D035,Goa,India,40000.00
+D036,Ahmedabad,India,25000.00
+D037,Dwarka,India,30000.00
+D038,Junagadh,India,30000.00
+D039,Bhuj,India,35000.00
+D040,Vadodara,India,25000.00
+D041,Somnath,India,30000.00
+D042,Rann of Kutch,India,40000.00
+D043,Kevadia,India,25000.00
+D044,Gandhinagar,India,25000.00
+D045,Jaipur,India,35000.00
+D046,Udaipur,India,40000.00
+D047,Jaisalmer,India,45000.00
+D048,Sawai Madhopur,India,35000.00
+D049,Pushkar,India,30000.00
+D050,Ajmer,India,30000.00
+D051,Jodhpur,India,35000.00
+D052,Chittorgarh,India,30000.00
+D053,Mount Abu,India,35000.00
+D054,Bikaner,India,30000.00
+D055,Amritsar,India,30000.00
+D056,Chandigarh,India,35000.00
+D057,Alappuzha,India,40000.00
+D058,Munnar,India,35000.00
+D059,Kochi,India,35000.00
+D060,Thiruvananthapuram,India,35000.00
+D061,Kozhikode,India,35000.00
+D062,Wayanad,India,35000.00
+D063,Thekkady,India,35000.00
+D064,Kumarakom,India,35000.00
+D065,Varkala,India,35000.00
+D066,Bekal,India,30000.00
+D067,Kovalam,India,35000.00
+D068,Kannur,India,40000.00
+D069,Nelliyampathy,India,35000.00
+D070,Mysore,India,35000.00
+D071,Hampi,India,35000.00
+D072,Coorg,India,35000.00
+D073,Gokarna,India,35000.00
+D074,Chikmagalur,India,35000.00
+D075,Badami,India,35000.00
+D076,Shivamogga,India,35000.00
+D077,Mangalore,India,35000.00
+D078,Murudeshwar,India,35000.00
+D079,Bijapur,India,35000.00
+D080,Bandipur,India,35000.00
+D081,Halebidu,India,35000.00
+D082,Pune,India,35000.00
+D083,Aurangabad,India,35000.00
+D084,Nashik,India,35000.00
+D085,Shirdi,India,35000.00
+D086,Alibaug,India,35000.00
+D087,Ratnagiri,India,35000.00
+D088,Nagpur,India,35000.00
+D089,Kolhapur,India,35000.00
+D090,Tarkarli,India,35000.00
+D091,Satara,India,35000.00
+D092,Matheran,India,35000.00
+D093,Ajanta,India,35000.00
+D094,Khajuraho,India,35000.00
+D095,Bhopal,India,35000.00
+D096,Indore,India,35000.00
+D097,Gwalior,India,35000.00
+D098,Ujjain,India,35000.00
+D099,Jabalpur,India,35000.00
+D100,Pachmarhi,India,35000.00
+D101,Kanha,India,35000.00
+D102,Bandhavgarh,India,35000.00
+D103,Orchha,India,35000.00
+D104,Mandu,India,35000.00
+D105,Bhimbetka,India,35000.00
+D106,Amarkantak,India,35000.00
+D107,Chitrakoot,India,35000.00
+D108,Shimla,India,35000.00
+D109,Manali,India,35000.00
+D110,dalhousie,India,35000.00
+D111,Spiti Valley,India,35000.00
+D112,Kullu,India,35000.00
+D113,Chamba,India,35000.00
+D114,Kinnaur,India,35000.00
+D115,Kangra,India,35000.00
+D116,Palampur,India,35000.00
+D117,Mandi,India,35000.00
+D118,Bir Billing,India,35000.00
+D119,McLeod Ganj,India,35000.00
+D120,Manikaran,India,35000.00
+D121,Narkanda,India,35000.00
+D122,Barot,India,35000.00
+D123,Shoja,India,35000.00
+D124,Kufri,India,35000.00
+D125,Nainital,India,35000.00
+D126,Rishikesh,India,35000.00
+D127,Haridwar,India,35000.00
+D128,Dehradun,India,35000.00
+D129,Mussoorie,India,35000.00
+D130,Auli,India,35000.00
+D131,Badrinath,India,35000.00
+D132,Almora,India,35000.00
+D133,Ranikhet,India,35000.00
+D134,Jim Corbett,India,35000.00
+D135,Uttarkashi,India,35000.00
+D136,Chopta,India,35000.00
+D137,Joshimath,India,35000.00
+D138,Agra,India,35000.00
+D139,Varanasi,India,35000.00
+D140,Lucknow,India,35000.00
+D141,Mathura,India,35000.00
+D142,Ayodhya,India,35000.00
+D143,Vrindavan,India,35000.00
+D144,Allahabad,India,35000.00
+D145,Jhansi,India,35000.00
+D146,Sarnath,India,35000.00
+D147,Fatehpur Sikri,India,35000.00
+D148,Noida,India,35000.00
+D149,Aligarh,India,35000.00
+D150,Meerut,India,35000.00
+D151,Kanpur,India,35000.00
+D152,Srinagar,India,35000.00
+D153,Leh,India,35000.00
+D154,Pahalgam,India,35000.00
+D155,Jammu,India,35000.00
+D156,Udhampur,India,35000.00
+D157,Anantnag,India,35000.00
+D158,Nubra Valley,India,35000.00
+D159,Kargil,India,35000.00
+D160,Diskit,India,35000.00
+D161,Kishtwar,India,35000.00
+D162,Hemis,India,35000.00
+D163,Dras,India,35000.00
+D164,Porbandar,India,35000.00
+D165,Darjeeling,India,35000.00
+D166,Siliguri,India,35000.00
+D167,Sundarbans,India,35000.00
+D168,Digha,India,35000.00
+D169,Murshidabad,India,35000.00
+D170,Bolpur,India,35000.00
+D171,Hooghly,India,35000.00
+D172,Jalpaiguri,India,35000.00
+D173,Cooch Behar,India,35000.00
+D174,Purulia,India,35000.00
+D175,Puri,India,35000.00
+D176,Konark,India,35000.00
+D177,Bhubaneswar,India,35000.00
+D178,Rourkela,India,35000.00
+D179,Cuttack,India,35000.00
+D180,Sambalpur,India,35000.00
+D181,Chilika,India,35000.00
+D182,Berhampur,India,35000.00
+D183,Keonjhar,India,35000.00
+D184,Balasore,India,35000.00
+D185,Kendujhar,India,35000.00
+D186,Chennai,India,35000.00
+D187,Madurai,India,35000.00
+D188,Rameswaram,India,35000.00
+D189,Kanyakumari,India,35000.00
+D190,Ooty,India,35000.00
+D191,Coimbatore,India,35000.00
+D192,Kodaikanal,India,35000.00
+D193,Thanjavur,India,35000.00
+D194,Mahabalipuram,India,35000.00
+D195,Yercaud,India,35000.00
+D196,Tirunelveli,India,35000.00
+D197,Chidambaram,India,35000.00
+D198,Vijayawada,India,35000.00
+D199,Visakhapatnam,India,35000.00
+D200,Srisailam,India,35000.00
+D201,Rajahmundry,India,35000.00
+D202,Anantapur,India,35000.00
+D203,Kurnool,India,35000.00
+D204,Amravati,India,35000.00
+D205,Guntur,India,35000.00
+D206,Kadapa,India,35000.00
+D207,Puttaparthi,India,35000.00
+D208,Vizianagaram,India,35000.00
+D209,Gangtok,India,35000.00
+D210,Pelling,India,35000.00
+D211,Namchi,India,35000.00
+D212,Ravangla,India,35000.00
+D213,Guwahati,India,35000.00
+D214,Kaziranga,India,35000.00
+D215,Sivasagar,India,35000.00
+D216,Majuli,India,35000.00
+D217,Manas,India,35000.00
+D218,Hajo,India,35000.00
+D219,Tawang,India,35000.00
+D220,Agartala,India,35000.00
+D221,Dumboor,India,35000.00
+D222,Unakoti,India,35000.00
+D223,Bastar,India,35000.00
+D224,Dzükou Valley,India,35000.00
+D225,Puducherry,India,35000.00
+D226,Auroville,India,35000.00
+D227,Port Blair,India,35000.00
+D228,Havelock Island,India,35000.00
+D229,Neil Island,India,35000.00
+D230,Baratang Island,India,35000.00
+D231,Diu,India,35000.00
+D232,Deoghar,India,35000.00
+D233,Ranchi,India,35000.00
+D234,Bodh Gaya,India,35000.00
+D235,Patna,India,35000.00
+D236,Gurugram,India,35000.00
+D237,New Delhi,India,35000.00
+D238,Kedarnath,India,35000.00
+D239,Greater Noida,India,35000.00
+D240,Cherrapunji,India,35000.00

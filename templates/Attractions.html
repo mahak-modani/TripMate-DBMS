@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Attractions</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/AdminDashboardStyles.css">
+
+  <link rel="stylesheet" href="../static/css/AttractionsStyles.css">
+</head>
+<body>
+  <!-- Sidebar with original h2 -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>TripMate Admin</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" id="users">Users</a></li>
+        <li><a href="#" id="destinations">Destinations</a></li>
+        <li><a href="#" id="attractions">Attractions</a></li>
+        <!--<li><a href="#" id="user-trips">User Trips</a></li>-->
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+
+  <div class="main-content">
+    <div class="dashboard-header">
+      <h1>Attractions Management</h1>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-container">
+      <input type="text" id="search-attraction" placeholder="Search by attraction name">
+      <select id="filter-city"></select>
+      <button class="btn-filter" onclick="applyFilters()">Apply Filters</button>
+    </div>
+
+    <div class="attractions-wrapper">
+      <table id="attractions-table">
+        <thead>
+          <tr>
+            <th>Attraction ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Zone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="add-attraction-container">
+      <h3>Add New Attraction</h3>
+      <form id="add-attraction-form">
+        <input type="text" id="id" placeholder="Attraction ID" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="zone" placeholder="Zone" required>
+        <input type="text" id="state" placeholder="State" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="type" placeholder="Type (e.g. Fort, Museum)" required>
+        <input type="number" id="year" placeholder="Established Year" required>
+        <input type="number" step="0.1" id="time_hr" placeholder="Time to Visit (in hrs)" required>
+        <input type="number" step="0.1" id="rating" placeholder="Rating (0.0 - 5.0)" required>
+        <input type="number" id="fee" placeholder="Entrance Fee (₹)" required>
+        <input type="text" id="airport_50km" placeholder="Nearest Airport within 50km" required>
+        <input type="text" id="weekly_off" placeholder="Weekly Off (e.g. Monday)" required>
+        <input type="text" id="significance" placeholder="Significance" required>
+        <input type="text" id="best_daytime" placeholder="Best Time of Day to Visit" required>
+        <input type="text" id="area" placeholder="Area / Locality" required>
+        <button class="btn-add" type="submit">Add Attraction</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      fetch('/api/admin/logout', {
+        method: 'GET'
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.redirect) {
+          window.location.href = data.redirect;
+        }
+      })
+      .catch(error => console.error('Error during logout:', error));
+    }
+  
+    const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+  
+    const routes = {
+      "users": isFlaskRunning ? "/users" : "../templates/users.html",
+      "destinations": isFlaskRunning ? "/destinations" : "../templates/Destinations.html",
+      "attractions": isFlaskRunning ? "/attractions" : "../templates/Attractions.html",
+      "user-trips": isFlaskRunning ? "/user_trips" : "../templates/UserTrips.html",
+      "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+    };
+  
+    document.getElementById("users").href = routes["users"];
+    document.getElementById("destinations").href = routes["destinations"];
+    document.getElementById("attractions").href = routes["attractions"];
+    document.getElementById("user-trips").href = routes["user-trips"];
+    document.getElementById("logout").href = routes["logout"];
+  </script>
+  
+  <script src="../static/js/AttractionsScripts.js"></script>
+</body>
+</html>

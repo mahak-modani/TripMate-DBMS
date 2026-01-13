@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner - TripMate</title>
+    <link rel="stylesheet" href="../static/css/TripPlannerStyles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../templates/dashboard.html" id="dashboard">Dashboard</a></li>
+                <li><a href="../templates/TripPlanner.html" id="trip-planner">Trip Planner</a></li>
+                <li><a href="../templates/MyTrips.html" id="my-trips">My Trips</a></li>
+                <!--<li><a href="../templates/BudgetTracker.html" id="budget-tracker">Budget Tracker</a></li>-->
+                <li><a href="../templates/Profile_Settings.html" id="profile-settings">Profile Settings</a></li>
+                <li><a href="../templates/logout.html" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>Plan Your Trip</h1>
+        </div>
+
+<!-- Budget Tracker -->
+<div class="trip-form">
+    <h2>Budget Tracker</h2>
+    <label for="budget">Enter Your Budget ($)</label>
+    <input type="number" id="budget" name="budget" placeholder="Enter your budget">
+    
+    <h3>Current Expenses</h3>
+    <p id="total-expenses">$0</p>
+    
+    <h3>Remaining Budget</h3>
+    <p id="remaining-budget">$0</p>
+    <div id="warning-banner" style="display: none;">⚠️ Over budget!</div>
+</div>
+
+<!-- Choose Destination -->
+<div class="trip-form">
+    <h2>Choose Your Destination</h2>
+    
+    <label for="country">Select Country</label>
+    <select id="country" name="country">
+        <option value="India">India</option>
+    </select>
+
+    <label for="city">Select City</label>
+    <select id="city" name="city">
+        <option value="">Select City</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Bengaluru">Bengaluru</option>
+    </select>
+
+    <label for="stay-area">Enter Area You're Staying In</label>
+    <input type="text" id="area" name="area" placeholder="e.g., BTM Layout">
+
+
+    <label for="start-date">Start Date</label>
+    <input type="date" id="start-date" name="start-date">
+
+    <label for="end-date">End Date</label>
+    <input type="date" id="end-date" name="end-date">
+
+    <label for="transport-mode">Preferred Mode of Transport</label>
+    <select id="transport-mode" name="transport-mode">
+        <option value="Metro">Metro</option>
+        <option value="Cab">Cab</option>
+        <option value="Auto">Auto</option>
+    </select>
+
+    <!-- Generate Itinerary Button -->
+    <button id="generate-itinerary">Generate Itinerary</button>
+
+<!-- Itinerary Display -->
+<div class="trip-form" id="generated-itinerary" style="display:none;">
+    <h2>Generated Itinerary</h2>
+    <div id="itinerary-list"></div>
+
+    <button id="save-itinerary">Save Final Itinerary</button>
+</div>
+
+
+
+</div>
+</div>
+
+
+    <script>
+        // Function to check if Flask is running
+        function isFlaskRunning() {
+            return window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+        }
+
+        // Define URLs for both cases
+        const routes = {
+          "dashboard": isFlaskRunning() ? "/dashboard" : "../templates/dashboard.html",
+          "trip-planner": isFlaskRunning() ? "/create_trip" : "../templates/TripPlanner.html",
+          "my-trips": isFlaskRunning() ? "/my_trips" : "../templates/MyTrips.html",
+          "profile-settings": isFlaskRunning() ? "/profile_settings" : "../templates/Profile_Settings.html",
+          "logout": isFlaskRunning() ? "/logout" : "../templates/logout.html"
+        };
+
+        // Set the href attributes dynamically
+        document.getElementById("dashboard").href = routes["dashboard"];
+        document.getElementById("trip-planner").href = routes["trip-planner"];
+        document.getElementById("my-trips").href = routes["my-trips"];
+        document.getElementById("profile-settings").href = routes["profile-settings"];
+        document.getElementById("logout").href = routes["logout"];
+    </script>
+
+    <script src="../static/js/TripPlannerScripts.js"></script>
+</body>
+</html>

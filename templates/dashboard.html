@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TripMate</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/DashboardStyles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>TripMate</h2>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" id="trip-planner">Trip Planner</a></li>
+        <li><a href="#" id="my-trips">My Trips</a></li>
+        <!--<li><a href="#" id="budget-tracker">Budget Tracker</a></li>-->
+        <li><a href="#" id="profile-settings">Profile Settings</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <div class="dashboard-header">
+      <h1 id="welcome-message">Welcome!</h1>
+    </div>
+
+    <div id="content">
+      <p>Welcome to TripMate! Use the menu on the left to navigate through the website.</p>
+    </div>
+  </div>
+
+  <script>
+    // Check if the site is being served by Flask (http://127.0.0.1:5000) or accessed as a file
+    const isFlaskRunning = window.location.origin.includes("127.0.0.1") || window.location.origin.includes("localhost");
+
+    // Define URLs for both cases
+    const routes = {
+      "trip-planner": isFlaskRunning ? "/create_trip" : "../templates/TripPlanner.html",
+      "my-trips": isFlaskRunning ? "/my_trips" : "../templates/MyTrips.html",
+      "profile-settings": isFlaskRunning ? "/profile_settings" : "../templates/Profile_Settings.html",
+      "logout": isFlaskRunning ? "/logout" : "../templates/logout.html"
+    };
+
+    // Set the href attributes dynamically
+    document.getElementById("trip-planner").href = routes["trip-planner"];
+    document.getElementById("my-trips").href = routes["my-trips"];
+    document.getElementById("profile-settings").href = routes["profile-settings"];
+    document.getElementById("logout").href = routes["logout"];
+  </script>
+
+  <script src="../static/js/DashboardScripts.js"></script>
+</body>
+</html>
